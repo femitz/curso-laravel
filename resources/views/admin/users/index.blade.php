@@ -3,6 +3,11 @@
 @section('title', 'Usuários')
 @section('content')
     <h1>Users</h1>
+
+    @if (session()->has('success'))
+        {{ session('success') }}
+    @endif
+
     <a href="{{ route('users.create') }}">Novo</a>
     <table>
         <thead>
